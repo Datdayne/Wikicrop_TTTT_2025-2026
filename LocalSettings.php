@@ -289,18 +289,19 @@ $wgVectorShowSkinPreferences = true; // Hiện tùy chọn skin trong giao diệ
 $wgVectorUseSidebarSearch = true;    // Sử dụng thanh tìm kiếm ở thanh bên
 $wgVectorUsePageTabsForNamespaces = true; // Dùng tab để phân biệt namespace
 
-#Không thêm được code từ web
-$wgHooks['SkinBuildSidebar'][] = function ($skin, &$bar) {
-    $bar['Công cụ dữ liệu'] = [
-        [
-            'text' => '🚀 Mở Jupyter Lab',
-            'href' => 'http://localhost:8000',
-            'id'   => 'n-jupyterhub',
-            'active' => true
-        ]
-    ];
-    return true;
-};
+
+#Bật này lên nếu không thêm được code từ web để mở đường dẫn tới jupyterlab
+// $wgHooks['SkinBuildSidebar'][] = function ($skin, &$bar) {
+//     $bar['Công cụ dữ liệu'] = [
+//         [
+//             'text' => '🚀 Mở Jupyter Lab',
+//             'href' => 'http://localhost:8000',
+//             'id'   => 'n-jupyterhub',
+//             'active' => true
+//         ]
+//     ];
+//     return true;
+// };
 
 
 // wfLoadExtension( 'ApiData' ); 
