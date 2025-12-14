@@ -15,7 +15,7 @@ class ApproveHooks {
         $dir = __DIR__ . '/../sql';
         $updater->addExtensionTable(
             'approve_queue',
-            "$dir/mysql/create_approve_queue.sql" // Đảm bảo đường dẫn này đúng với cấu trúc thư mục của bạn
+            "$dir/mysql/create_approve_queue.sql" 
         );
         return true;
     }
