@@ -311,17 +311,17 @@ $wgHooks['SkinBuildSidebar'][] = function ($skin, &$bar) {
 // $wgDonateButtonURL = "https://example.org";
 
 // Tich hop keycloack
-wfLoadExtension( 'PluggableAuth' );
-wfLoadExtension( 'OpenIDConnect' );
+// wfLoadExtension( 'PluggableAuth' );
+// wfLoadExtension( 'OpenIDConnect' );
 
-$wgPluggableAuth_Config[] = [
-    'plugin' => 'OpenIDConnect',
-    'data' => [
-        'providerURL' => 'http://localhost:8080/realms/my_realm', 
-        'clientID' => 'my_client',
-        'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' #nho thay doi dua theo client secret tren keycloak
-    ]
-];
+// $wgPluggableAuth_Config[] = [
+//     'plugin' => 'OpenIDConnect',
+//     'data' => [
+//         'providerURL' => 'http://localhost:8080/realms/my_realm', 
+//         'clientID' => 'my_client',
+//         'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' #nho thay doi dua theo client secret tren keycloak
+//     ]
+// ];
 
 
 $wgOpenIDConnect_SingleLogout = true; // Dang xuat hoan toan
