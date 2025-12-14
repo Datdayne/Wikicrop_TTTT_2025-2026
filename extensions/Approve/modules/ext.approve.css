@@ -1,0 +1,6 @@
+/* ext.approve styles */
+.approve-table { border-collapse: collapse; width: 100%; }
+.approve-table th, .approve-table td { border: 1px solid #ddd; padding: 8px; }
+.approve-table th { background: #007bff; color: #fff; }
+.btn-approve { background: #28a745; color: #fff; border: none; padding: 6px 8px; cursor: pointer; border-radius: 4px; }
+.btn-reject { background: #dc3545; color: #fff; border: none; padding: 6px 8px; cursor: pointer; border-radius: 4px; margin-left:6px; }

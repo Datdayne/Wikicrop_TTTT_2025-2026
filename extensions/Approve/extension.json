@@ -1,0 +1,48 @@
+{
+  "name": "Approve",
+  "version": "1.0",
+  "author": "Nguyen Phuoc Phat",
+  "description": "Approve extension for MediaWiki",
+  "type": "other",
+  "manifest_version": 2,
+  "requires": {
+    "MediaWiki": ">= 1.35.0"
+  },
+
+  "AutoloadNamespaces": {
+    "MediaWiki\\Extension\\Approve\\": "includes/"
+  },
+
+  "Hooks": {
+    "LoadExtensionSchemaUpdates": "MediaWiki\\Extension\\Approve\\ApproveHooks::onSchemaUpdate",
+    "RevisionRecordInserted": "MediaWiki\\Extension\\Approve\\ApproveHooks::onRevisionRecordInserted",
+    "BeforePageDisplay": "MediaWiki\\Extension\\Approve\\ApproveHooks::onBeforePageDisplay"
+  },
+
+  "APIModules": {
+    "approvelist": "MediaWiki\\Extension\\Approve\\ApiApproveList",
+    "approve": "MediaWiki\\Extension\\Approve\\ApiApprove",
+    "approveimport": "MediaWiki\\Extension\\Approve\\ApiApproveImport"
+  },
+
+  "SpecialPages": {
+    "Approve": "MediaWiki\\Extension\\Approve\\SpecialApprove"
+  },
+
+  "ResourceModules": {
+    "ext.approve": {
+      "localBasePath": "modules",
+      "remoteExtPath": "Approve/modules",
+      "scripts": ["ext.approve.js"],
+      "styles": ["ext.approve.css"],
+      "dependencies": ["mediawiki.api", "mediawiki.util", "mediawiki.user"],
+      "targets": ["desktop", "mobile"]
+    }
+  },
+
+  "AvailableRights": ["approverevisions"],
+  "GroupPermissions": {
+    "sysop": { "approverevisions": true },
+    "bureaucrat": { "approverevisions": true }
+  }
+}
