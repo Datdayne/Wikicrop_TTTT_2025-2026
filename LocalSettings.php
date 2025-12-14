@@ -44,17 +44,17 @@ $wgLogos = [
 
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
-$wgPasswordSender = "datb2207515@student.ctu.edu.vn";
+$wgPasswordSender = "yourgmail@";
 
 $wgSMTP = [
-'host' => 'ssl://smtp.gmail.com', // Gmail SMTP Server
-'port' => 465,
-'IDHost' => 'localhost',
-'auth' => true,
-'username' => 'datb2207515@student.ctu.edu.vn', // Your full Gmail address
-'password' => 'gion aqaz ueyv qmaw' // The App Password you generated
+    'host' => 'ssl://smtp.gmail.com', // Gmail SMTP Server
+    'port' => 465,
+    'IDHost' => 'localhost',
+    'auth' => true,
+    // KHÔNG ĐƯỢC ĐẶT MẬT KHẨU THẬT TẠI ĐÂY KHI COMMIT LÊN GITHUB
+    'username' => 'yourgmail@', 
+    'password' => 'YOUR_APP_PASSWORD_HERE' // THAY BẰNG PLACEHOLDER
 ];
-
 $wgEmergencyContact = "";
 
 
