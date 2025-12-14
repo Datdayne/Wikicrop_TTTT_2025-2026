@@ -117,7 +117,7 @@ $wgLocaltimezone = "Europe/Berlin";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "f87644f0b1ebbd45885b2ef166fbed53253d0260418fa9257917c05cda619e30";
+$wgSecretKey = "f87644f0b1ebbd45885b2ef166fbed53253d0260418fa9257917c05cda619e30"; #chu y cai nay phai thay doi
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -319,7 +319,7 @@ $wgPluggableAuth_Config[] = [
     'data' => [
         'providerURL' => 'http://localhost:8080/realms/my_realm', 
         'clientID' => 'my_client',
-        'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' 
+        'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' #nho thay doi dua theo client secret tren keycloak
     ]
 ];
 
