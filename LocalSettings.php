@@ -18,14 +18,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "PlantLibrary";
+$wgSitename = "Wikicrop";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = "/mediawiki";
+$wgScriptPath = "/wikicrop";
 
 ## The protocol and server name to use in fully-qualified URLs
 // $wgServer = "http://localhost";
@@ -312,17 +312,17 @@ $wgVectorUsePageTabsForNamespaces = true; // Dùng tab để phân biệt namesp
 // $wgDonateButtonURL = "https://example.org";
 
 // Tich hop keycloack
-// wfLoadExtension( 'PluggableAuth' );
-// wfLoadExtension( 'OpenIDConnect' );
+wfLoadExtension( 'PluggableAuth' );
+wfLoadExtension( 'OpenIDConnect' );
 
-// $wgPluggableAuth_Config[] = [
-//     'plugin' => 'OpenIDConnect',
-//     'data' => [
-//         'providerURL' => 'http://localhost:8080/realms/my_realm', 
-//         'clientID' => 'my_client',
-//         'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' #nho thay doi dua theo client secret tren keycloak
-//     ]
-// ];
+$wgPluggableAuth_Config[] = [
+    'plugin' => 'OpenIDConnect',
+    'data' => [
+        'providerURL' => 'http://localhost:8080/realms/my_realm', 
+        'clientID' => 'my_client',
+        'clientsecret' => 'qqmDtLdn3vjTvl0rkhGqD6orwSRZzvXM' #nho thay doi dua theo client secret tren keycloak
+    ]
+];
 
 
 $wgOpenIDConnect_SingleLogout = true; // Dang xuat hoan toan
